@@ -29,6 +29,7 @@ line-height: 1.8em;
 background-image: url('https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811_1280.jpg');
 min-height: 400px;
 
+
 }
 
 
@@ -52,6 +53,30 @@ min-height: 400px;
 
 }
 
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 8px;
+    text-transform: uppercase ;
+    
+
+}
+
+.ptext .border{
+    background-color: #111;
+    color: white;
+    opacity: 0.50;
+}
+
+.border a{
+    text-decoration: none;
+    color: white;
+}
+
+
 .img-welcome , .img-state-1 , .img-state-2,  .img-state-3,  .img-transport {
 position: relative;
 opacity: 0.70;
@@ -63,3 +88,36 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 
 }
+
+/* texte section */
+
+.titre-principal {
+
+    color:black;
+    text-align: center;
+    margin: 0;
+    padding:10px;
+    
+
+}
+
+.welcome {
+    text-align: center;
+    background-color: white;
+    color:black;
+}
+
+ section{
+    background-color:#413131;
+    color: white;
+    text-align: center;
+}
+
+
+.welcome-txt, .txt-north, .txt-center, .txt-south, .txt-trans {
+    margin: 0px;
+    padding: 50px;
+}
+
+
+
