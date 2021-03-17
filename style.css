@@ -1,1 +1,65 @@
 
+
+
+
+/* index-parralax */
+
+/* body */
+body, html {
+height: 100%;
+margin: 0;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.8em;
+
+}
+
+
+/* image-index */
+
+
+.img-welcome {
+
+    background-image:url('https://cdn.pixabay.com/photo/2014/08/08/21/02/iceland-413702_1280.jpg');
+    min-height: 400px;
+
+}
+
+.img-state-1{
+background-image: url('https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811_1280.jpg');
+min-height: 400px;
+
+}
+
+
+.img-state-2{
+    background-image: url('https://cdn.pixabay.com/photo/2018/01/14/23/14/forest-3082836_1280.jpg');
+    min-height: 400px;
+
+}
+
+
+.img-state-3{
+    background-image: url('https://cdn.pixabay.com/photo/2016/10/10/22/31/desert-1730077_1280.jpg');
+    min-height: 400px;
+
+}
+
+.img-transport {
+
+    background-image: url('https://cdn.pixabay.com/photo/2018/05/19/09/20/emotions-3413040_1280.jpg');
+    min-height: 400px;
+
+}
+
+.img-welcome , .img-state-1 , .img-state-2,  .img-state-3,  .img-transport {
+position: relative;
+opacity: 0.70;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+
+
+background-attachment: fixed;
+
+}
