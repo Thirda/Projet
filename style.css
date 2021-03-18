@@ -12,46 +12,60 @@ header {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
   position: sticky;
-  /* box-shadow: 1px 1px 15px grey; */
 }
 
 .nom-site {
   font-weight: bold;
   color: #000000;
   margin-left: 200px;
+  padding-bottom: 8px;
 }
 
 nav {
   box-sizing: border-box;
   transition: 0.5s;
 }
+
 nav ul {
-  margin-right: 200px;
   display: flex;
   justify-content: center;
+  margin-right: 100px;
   list-style-type: none;
+  text-align: center;
 }
 
 nav li {
-  padding: 0 30px 0 70px;
+  padding: 0 15px 0 15px;
   font-size: 20px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #000000;
-  text-decoration: none;
-  /* font-family: ; */
-  /* text-transform: uppercase; */
-}
-
-nav a:hover {
+a {
   color: black;
-  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+a::after {
   color: #000000;
+  text-decoration: none;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  right: 10%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
   text-decoration: none;
 }
 
-/* https://www.youtube.com/watch?v=H4MkGzoACpQ */
-
-/* https://www.youtube.com/watch?v=_pZrP3r1rMo */
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
