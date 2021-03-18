@@ -1,0 +1,31 @@
+.player1 {
+    width: 200px;
+    height: 200px;
+}
+
+.player2 {
+    width: 200px;
+    height: 200px;
+}
+
+.player3 {
+    width: 200px;
+    height: 200px;
+}
+.player {
+    display: flex;
+    justify-content: center;
+}
+.transporttitre {
+    display: flex;
+    justify-content: center;
+}
+.moyentitre {
+    display: flex;
+    justify-content: center;
+}
+.descrititre {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
