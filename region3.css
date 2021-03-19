@@ -18,18 +18,18 @@ body, html{
 }
 
 .pimg1 {
-    background-image: url('https://i2.wp.com/arrahmahnews.com/wp-content/uploads/2018/11/iceland-1950869_1920.jpg?ssl=1');
+    background-image: url('https://images.pexels.com/photos/371572/pexels-photo-371572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     min-height: 100%;
     }
 
 .pimg3 {
-    background-image: url('https://images.hdqwalls.com/download/yellowstone-national-park-hd-qs-3840x2160.jpg');
+    background-image: url('https://cdn.pixabay.com/photo/2020/02/11/16/08/arch-4840015_1280.jpg');
     min-height: 70%;
 }
 
 
 .pimg2 {
-    background-image: url('https://i1.wp.com/www.staceypardoe.com/wp-content/uploads/2017/10/west-glacier-2184941_1920.jpg?fit=1920%2C1279&ssl=1');
+    background-image: url('https://images.pexels.com/photos/1840794/pexels-photo-1840794.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     min-height: 70%;
 }
 
@@ -46,20 +46,23 @@ section {
     font-size: 45px;
     letter-spacing: 8px;
     text-transform: lowercase ;
-    color: rgb(221, 220, 221);
+    color: rgb(255, 255, 255);
 
 }
 .section1 {
-    background-color: rgb(56, 64, 139);
+    background-color: rgb(19, 67, 156);
     color: white;
+    opacity: 0.30;
 }
 .section2 {
-    background-color: rgb(78, 27, 27);
+    background-color: rgb(92, 22, 22);
     color: white;
+    opacity: 0.30;
 }
 .section3 {
-    background-color: rgb(70, 60, 94);
+    background-color: rgb(59, 38, 107);
     color: white;
+    opacity: 0.30;
 }
 
 @media(max-width: 568px){
