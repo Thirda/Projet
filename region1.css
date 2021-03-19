@@ -1,0 +1,69 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #373b70;
+}
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0,70;
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url('https://i2.wp.com/arrahmahnews.com/wp-content/uploads/2018/11/iceland-1950869_1920.jpg?ssl=1');
+    min-height: 100%;
+    }
+
+.pimg3 {
+    background-image: url('https://images.hdqwalls.com/download/yellowstone-national-park-hd-qs-3840x2160.jpg');
+    min-height: 70%;
+}
+
+
+.pimg2 {
+    background-image: url('https://i1.wp.com/www.staceypardoe.com/wp-content/uploads/2017/10/west-glacier-2184941_1920.jpg?fit=1920%2C1279&ssl=1');
+    min-height: 70%;
+}
+
+section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 8px;
+    text-transform: lowercase ;
+    color: rgb(221, 220, 221);
+
+}
+.section1 {
+    background-color: rgb(56, 64, 139);
+    color: white;
+}
+.section2 {
+    background-color: rgb(78, 27, 27);
+    color: white;
+}
+.section3 {
+    background-color: rgb(70, 60, 94);
+    color: white;
+}
+
+@media(max-width: 568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
