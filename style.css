@@ -209,16 +209,7 @@ html {
   color: white;
 }
 
-.img-welcome,
-.img-state-1,
-.img-state-2,
-.img-state-3,
-.img-transport {
-  position: relative;
-  opacity: 0.7;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
 
 .img-welcome , .img-state-1 , .img-state-2,  .img-state-3,  .img-transport {
 position: relative;
@@ -226,7 +217,7 @@ opacity: 0.70;
 background-position: center;
 background-size: cover ;
 background-repeat: no-repeat;
-margin: 15px;
+margin: 15px; 
 
 
 background-attachment: fixed;
