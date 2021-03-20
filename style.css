@@ -1,67 +1,58 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-header {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  /* background-color: cadetblue; */
-}
-
-/* h1 {
-  font-weight: bold;
-  color: #000000;
-  margin-left: 200px;
-  padding-bottom: 8px;
-} */
 
 nav {
   height: 10vh;
   display: flex;
   justify-content: space-between;
-  align-items: center; */
-  background-color: cadetblue;
+  align-items: center;
+  background-color: coral;
+}
+
+h1 {
+  background-color: chartreuse;
+  margin-left: 100px;
 }
 
 .nav-links {
+  display: flex;
+  list-style: none;
+  margin-right: 100px;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   list-style: none;
   width: 50%;
   height: 100%;
-  margin-left: auto;
-  background-color: salmon;
+  margin-right: 100px;
 }
 
 .nav-links li a {
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
   display: inline-block;
   padding-bottom: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  color: black;
+  background-color: thistle;
   position: relative;
 }
 
 .nav-links a::after {
-  color: #000000;
-  text-decoration: none;
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
   height: 2px;
-  right: 10%;
-  position: absolute;
   background: black;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  text-decoration: none;
+  position: absolute;
 }
 
 .nav-links a:hover::after {
@@ -69,10 +60,34 @@ nav {
   left: 0;
 }
 
-@media screen and (max-width: 768px) {
-  /* h1 {
-    display: none;
-  } */
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    height: 100vh;
+    background-color: blue;
+  }
+
+  h1 {
+    padding: 0;
+  }
+
+  .burger-title {
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: violet;
+  }
+
+  .menu-ham {
+    display: block;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background-color: yellow;
+    margin: 10px;
+  }
 
   .line {
     width: 30px;
@@ -81,32 +96,20 @@ nav {
     margin: 5px;
   }
 
-  nav {
-    position: relative;
-  }
-
-  .menu-ham {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-  }
-
   .nav-links {
-    position: fixed;
-    background-color: cadetblue;
+    background-color: white;
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    clip-path: circle(100px at 90% -15%);
-    -webkit-clip-path: circle(100px at 90% -15%);
+    clip-path: circle(100px at 90% -35%);
+    -webkit-clip-path: circle(100px at 90% -35%);
     transition: all 1s ease-out;
     pointer-events: none;
+    z-index: 2;
   }
 
   .nav-links.open {
+    height: 100vh;
     clip-path: circle(2000px at 90% -15%);
     -webkit-clip-path: circle(2000px at 90% -15%);
     pointer-events: all;
@@ -117,7 +120,7 @@ nav {
   }
 
   .nav-links li a {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .nav-links li:nth-child(1) {
@@ -149,119 +152,12 @@ nav {
   }
 }
 
-/* index-parralax */
-
-/* body */
-/* body,
-html {
-  height: 100%;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8em;
-} */
-
-/* image-index */
-
-/* .img-welcome {
+.img-welcome {
   background-image: url("https://cdn.pixabay.com/photo/2014/08/08/21/02/iceland-413702_1280.jpg");
-  min-height: 400px;
-}
-
-.img-state-1 {
-  background-image: url("https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811_1280.jpg");
-  min-height: 400px;
-}
-
-.img-state-2 {
-  background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/14/forest-3082836_1280.jpg");
-  min-height: 400px;
-}
-
-.img-state-3 {
-  background-image: url("https://cdn.pixabay.com/photo/2016/10/10/22/31/desert-1730077_1280.jpg");
-  min-height: 400px;
-}
-
-.img-transport {
-  background-image: url("https://cdn.pixabay.com/photo/2018/05/19/09/20/emotions-3413040_1280.jpg");
-  min-height: 400px;
-}
-
-.ptext {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  font-size: 45px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-}
-
-.ptext .border {
-  background-color: #111;
-  color: white;
-  opacity: 0.5;
-}
-
-.border a {
-  text-decoration: none;
-  color: white;
-}
-
-.img-welcome,
-.img-state-1,
-.img-state-2,
-.img-state-3,
-.img-transport {
-  position: relative;
+  width: auto;
+  height: 100vh;
   opacity: 0.7;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-
-/* border: 1px, solid ,white;
-    border-radius: 10px; 
-}
-
-/* texte section */
-
-/* .titre-principal {
-    font-size: 60px;
-    color:black;
-    text-align: center;
-    margin: 0;
-    padding:10px;
-}
-
-
-
-.welcome {
-  text-align: center;
-  background-color: white;
-  color: black;
-}
-
-section {
-  background-color: #413131;
-  color: white;
-  text-align: center;
-}
-
-
- .txt-north, .txt-center, .txt-south, .txt-trans {
-    margin: 0px;
-    color: white;
-    padding: 50px;
-    font-size: 20px;
-}
-
-
-
-footer{
-    width: 100%;
-    height: 80px;
-    background-color: chocolate;
-} */
