@@ -87,24 +87,51 @@ h1 {
     background-color: violet;
   }
 
-  .menu-ham {
-    display: block;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    margin: 10px;
-  }
-
   /* Disable scrolling in the background when burger menu is open */
   .lock-scroll {
     overflow: hidden;
   }
 
-  .line {
+  .menu-ham {
     width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: relative;
+    margin: 30px;
+  }
+
+  .line {
+    width: 100%;
     height: 3px;
     background-color: black;
-    margin: 5px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .line:nth-child(1) {
+    top: 0px;
+  }
+  .line:nth-child(2) {
+    top: 10px;
+  }
+  .line:nth-child(3) {
+    top: 20px;
+  }
+
+  /* Animation burger-menu */
+  .menu-ham.active .line:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+
+  .menu-ham.active .line:nth-child(2) {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  .menu-ham.active .line:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
   }
 
   .nav-links {
