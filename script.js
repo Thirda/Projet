@@ -9,3 +9,8 @@ menuHam.addEventListener("click", () => {
     link.classList.toggle("fade");
   });
 });
+
+// Disable scrolling in the background when burger menu is open
+function lockScroll() {
+  document.body.classList.toggle("lock-scroll");
+}

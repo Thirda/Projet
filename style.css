@@ -13,8 +13,9 @@ nav {
 }
 
 h1 {
-  background-color: chartreuse;
   margin-left: 100px;
+  padding-bottom: 8px;
+  font-size: 30px;
 }
 
 .nav-links {
@@ -39,10 +40,11 @@ h1 {
   font-size: 16px;
   letter-spacing: 0.15em;
   color: black;
-  background-color: thistle;
+
   position: relative;
 }
 
+/*hover effect*/
 .nav-links a::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -60,16 +62,21 @@ h1 {
   left: 0;
 }
 
+.img-welcome {
+  background-image: url("https://cdn.pixabay.com/photo/2014/08/08/21/02/iceland-413702_1280.jpg");
+  width: auto;
+  height: 100vh;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 800px) {
   nav {
     flex-direction: column;
     align-items: stretch;
     height: 100vh;
-    background-color: blue;
-  }
-
-  h1 {
-    padding: 0;
   }
 
   .burger-title {
@@ -85,8 +92,12 @@ h1 {
     align-items: center;
     padding: 15px;
     cursor: pointer;
-    background-color: yellow;
     margin: 10px;
+  }
+
+  /* Disable scrolling in the background when burger menu is open */
+  .lock-scroll {
+    overflow: hidden;
   }
 
   .line {
@@ -123,6 +134,7 @@ h1 {
     font-size: 20px;
   }
 
+  /* Gradual effect link */
   .nav-links li:nth-child(1) {
     transition: all 0.5s ease 0.2s;
   }
@@ -150,14 +162,8 @@ h1 {
   li.fade {
     opacity: 1;
   }
-}
 
-.img-welcome {
-  background-image: url("https://cdn.pixabay.com/photo/2014/08/08/21/02/iceland-413702_1280.jpg");
-  width: auto;
-  height: 100vh;
-  opacity: 0.7;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* .img-welcome {
+    display: none;
+  } */
 }
