@@ -5,7 +5,7 @@
 }
 
 nav {
-  height: 10vh;
+  height: 9vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,15 +76,15 @@ h1 {
   nav {
     flex-direction: column;
     align-items: stretch;
-    height: 100vh;
+    position: relative;
   }
 
   .burger-title {
-    height: 11vh;
+    height: 9vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: violet;
+    background-color: white;
   }
 
   /* Disable scrolling in the background when burger menu is open */
@@ -98,6 +98,7 @@ h1 {
     cursor: pointer;
     position: relative;
     margin: 30px;
+    z-index: 3;
   }
 
   .line {
@@ -139,17 +140,18 @@ h1 {
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    clip-path: circle(100px at 90% -35%);
-    -webkit-clip-path: circle(100px at 90% -35%);
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
     transition: all 1s ease-out;
     pointer-events: none;
     z-index: 2;
+    position: absolute;
   }
 
   .nav-links.open {
     height: 100vh;
-    clip-path: circle(2000px at 90% -15%);
-    -webkit-clip-path: circle(2000px at 90% -15%);
+    clip-path: circle(2000px at 90% -10%);
+    -webkit-clip-path: circle(2000px at 90% -10%);
     pointer-events: all;
   }
 

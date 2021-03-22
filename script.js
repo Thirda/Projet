@@ -4,8 +4,8 @@ const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
 menuHam.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
   menuHam.classList.toggle("active");
+  navLinks.classList.toggle("open");
   links.forEach((link) => {
     link.classList.toggle("fade");
   });
