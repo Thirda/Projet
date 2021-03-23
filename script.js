@@ -13,7 +13,7 @@ menuHam.addEventListener("click", () => {
   });
 });
 
-// Disable scrolling in the background when burger menu is open
+ // Disable scrolling in the background when burger menu is open
 function lockScroll() {
   document.body.classList.toggle("lock-scroll");
 }

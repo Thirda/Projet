@@ -15,17 +15,14 @@ nav {
 
 .nom-site {
   margin-left: 100px;
-  padding-bottom: 8px;
-  font-size: 30px;
-  /* padding-bottom: 18px; */
+  font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
+  padding-top: 5px;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  margin-right: 100px;
-  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -37,12 +34,12 @@ nav {
 
 .nav-links li a {
   display: inline-block;
-  padding: 8px 0px;
+  padding: 16px 0px 8px 0px;
   text-decoration: none;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.15em;
+  font-size: 12px;
+  letter-spacing: 0.04em;
   color: black;
   position: relative;
 }
@@ -96,7 +93,19 @@ nav {
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 800px) {
+/*Media queries*/
+@media screen and (max-width: 900px) {
+  .nav-links {
+    width: 65%;
+    margin-right: 50px;
+  }
+
+  .nom-site {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 690px) {
   nav {
     flex-direction: column;
     align-items: stretch;
@@ -115,8 +124,13 @@ nav {
     height: 22px;
     cursor: pointer;
     position: relative;
-    margin: 30px;
+    margin-top: 10px;
+    margin-right: 50px;
     z-index: 3;
+  }
+
+  .nom-site {
+    margin: 50px;
   }
 
   .line {
@@ -158,8 +172,8 @@ nav {
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    clip-path: circle(100px at 90% -10%);
-    -webkit-clip-path: circle(100px at 90% -10%);
+    clip-path: circle(100px at 90% -15%);
+    -webkit-clip-path: circle(100px at 90% -15%);
     transition: all 1s ease-out;
     pointer-events: none;
     z-index: 2;
@@ -174,7 +188,8 @@ nav {
   }
 
   .nav-links li a {
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0;
   }
 
   /* Gradual effect link */
