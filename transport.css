@@ -188,10 +188,22 @@ border: 1px solid black
 
 
 .text-croco , .text-licorn , .text-dragon {
-   height: 500px;
+   height: 100px;
    width: 100%;
    display: flex; 
    align-items: center;  
 
 }
 
+.imgcrocodile, .imgLicorne , .imgdragon {
+float: left;
+width: 20%;
+height: 500px;
+
+}
+
+.imgLicorne {
+   float: right;
+   width: 20%;
+   height: 80px;
+}
