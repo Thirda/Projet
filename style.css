@@ -10,6 +10,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -37,11 +38,21 @@ h1 {
   padding-bottom: 8px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
   letter-spacing: 0.15em;
   color: black;
-
   position: relative;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.sticky + .content {
+  padding-top: 60px;
 }
 
 /*hover effect*/
@@ -77,10 +88,6 @@ h1 {
     flex-direction: column;
     align-items: stretch;
   }
-
-  /* nav.open {
-    position: relative;
-  } */
 
   .burger-title {
     height: 9vh;
