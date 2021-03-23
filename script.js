@@ -1,9 +1,11 @@
 // Burger menu
+const nav = document.querySelector("nav");
 const menuHam = document.querySelector(".menu-ham");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
 
 menuHam.addEventListener("click", () => {
+  nav.classList.toggle("visible");
   menuHam.classList.toggle("active");
   navLinks.classList.toggle("open");
   links.forEach((link) => {
