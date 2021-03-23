@@ -60,7 +60,7 @@
    background: #007EA7;
 }
 #slides .slide_4 {
-   background: #00A8E8;
+   background: #ffffff;
 }
 #controls {
    margin: -180px 0 0 0;
@@ -131,17 +131,47 @@
       margin: 0 auto;
    }
 }
-.transporttitre {
-    display: flex;
-    justify-content: center;
-}
+.imgcentral .textcentral {
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 1;
+   position: absolute;
+   text-align: center;
+   margin: 0 auto;
+   left: 0;
+   right: 0;
+   top: 40%;
+   color: white;
+   width: 50%;
+ }
+
 .moyentitre {
     display: flex;
     justify-content: center;
+    border: groove 5px rgb(0, 0, 0);
+   padding: 8px;
+   border-radius: 0 10px 10px 10px;
+   background-color : rgb(180, 180, 180);
+   color: black;
 }
 .descrititre {
     display: flex;
     justify-content: center;
     text-align: center;
 }
+.dragonimg {
+   width: 700px;
+   padding-bottom: 50px;
+}
+.crocoimg{
+   width: 772px;
+  
+}
+.licorneimg {
+   width: 772px;
+}
+.logo{
+   width: 400px;
+}
+
+
 /*fin de conteneur1*/
