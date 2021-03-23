@@ -5,7 +5,7 @@
 }
 
 nav {
-  height: 9vh;
+  height: 11vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,10 +13,12 @@ nav {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+.nom-site {
   margin-left: 100px;
   padding-bottom: 8px;
   font-size: 30px;
+  /* padding-bottom: 18px; */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-links {
@@ -30,17 +32,46 @@ h1 {
   list-style: none;
   width: 50%;
   height: 100%;
-  margin-right: 100px;
+  margin-right: 85px;
 }
 
 .nav-links li a {
   display: inline-block;
-  padding-bottom: 8px;
+  padding: 8px 0px;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
   letter-spacing: 0.15em;
   color: black;
   position: relative;
+}
+
+/*hover link effect*/
+.nav-links a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  position: absolute;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/*active link effect*/
+.nav-links a:active {
+  font-weight: 600;
+}
+
+.nav-links a:active::after {
+  height: 2px;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -53,24 +84,6 @@ h1 {
 
 .sticky + .content {
   padding-top: 60px;
-}
-
-/*hover effect*/
-.nav-links a::after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  background: black;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-  position: absolute;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-  left: 0;
 }
 
 .img-welcome {
@@ -90,16 +103,11 @@ h1 {
   }
 
   .burger-title {
-    height: 9vh;
+    height: 11vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-  }
-
-  /* Disable scrolling in the background when burger menu is open */
-  .lock-scroll {
-    overflow: hidden;
   }
 
   .menu-ham {
@@ -165,15 +173,15 @@ h1 {
     pointer-events: all;
   }
 
+  .nav-links li a {
+    font-size: 16px;
+  }
+
+  /* Gradual effect link */
   .nav-links li {
     opacity: 0;
   }
 
-  .nav-links li a {
-    font-size: 20px;
-  }
-
-  /* Gradual effect link */
   .nav-links li:nth-child(1) {
     transition: all 0.5s ease 0.2s;
   }
@@ -202,7 +210,8 @@ h1 {
     opacity: 1;
   }
 
-  /* .img-welcome {
-    display: none;
-  } */
+  /* Disable scrolling in the background when burger menu is open */
+  .lock-scroll {
+    overflow: hidden;
+  }
 }
