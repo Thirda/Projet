@@ -1,72 +1,109 @@
-body, html{
-    height: 100%;
-    margin: 0;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    line-height: 1.8em;
-    color: #373b70;
-}
-
-.pimg1, .pimg2, .pimg3{
-    position: relative;
-    background-repeat: no-repeat;
+.img1 {
+    width: 100%;
+    height: 700px;
     background-size: cover;
     background-position: center;
-    opacity: 0,70;
-    background-attachment: fixed;
-}
-
-.pimg1 {
+    position: relative;
     background-image: url('https://images.pexels.com/photos/371572/pexels-photo-371572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     min-height: 100%;
-    }
-
-.pimg3 {
-    background-image: url('https://cdn.pixabay.com/photo/2020/02/11/16/08/arch-4840015_1280.jpg');
-    min-height: 70%;
-}
-
-
-.pimg2 {
-    background-image: url('https://images.pexels.com/photos/1840794/pexels-photo-1840794.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    min-height: 70%;
-}
-
-section {
-    text-align: center;
-    padding: 50px 80px;
-}
-
-.ptext{
+    filter: brightness(80%);
+    min-width: 50%;
+  }
+  
+  .text {
     position: absolute;
     top: 50%;
     width: 100%;
     text-align: center;
     font-size: 45px;
-    letter-spacing: 8px;
-    text-transform: lowercase ;
-    color: rgb(255, 255, 255);
+    letter-spacing: 9px;
+    text-transform: lowercase;
+    color: rgb(255, 255, 255) !important;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 50%;
+    min-height: 100%;
+  }
+  
+  img.alignLeft {
+    float: left;
+    width: 662px;
+    height: 400px;
+  }
+  
+  img.alignRight {
+    float: right;
+    width: 662px;
+    height: 400px;
+  }
+  
+  .alignLeft {
+    text-align: left;
+    margin:auto;
+    max-width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .alignRight {
+    margin: auto;
+    max-width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  #grandContainer {
+  margin-left: 40px;
+  margin-right: 40px;
+  }
 
-}
-.section1 {
-    background-color: rgb(19, 67, 156);
-    color: white;
-    opacity: 0.30;
-}
-.section2 {
-    background-color: rgb(92, 22, 22);
-    color: white;
-    opacity: 0.30;
-}
-.section3 {
-    background-color: rgb(59, 38, 107);
-    color: white;
-    opacity: 0.30;
-}
+  .container {
+      height: 500px;
+      width: 100%;
+      display: flex; 
+      align-items: center;  
 
-@media(max-width: 568px){
-    .pimg1, .pimg2, .pimg3{
-        background-attachment: scroll;
-    }
-}
+  }
+
+  .switch {
+    display: flex; 
+    align-items: center;  
+    flex-direction: row-reverse;
+  }
+
+  span{
+      font-size: 1.5em;
+      font-weight: bolder;
+      margin: 0 0 20px 0; 
+      text-align: left;
+  }
+
+  .decouvrir{
+    margin-left: 62px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-top: 100px;
+  }
+
+  span{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .imgTitle{
+    position: absolute;
+    text-align: center;
+    left: 170px;
+    color: white;
+    font-size: 27px;
+  }
+
+  .imgTitleRight{
+    position: absolute;
+    text-align: center;
+    right: 215px;
+    color: white;
+    font-size: 27px;
+    margin: auto;
+  }
+
+  @media(max-width: 568px){
+   
+  }
