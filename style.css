@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 11vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nom-site {
+  margin-left: 100px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  margin-right: 85px;
+}
+
+.nav-links li a {
+  display: inline-block;
+  padding: 16px 0px 8px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: black;
+  position: relative;
+}
+
+/*hover link effect*/
+.nav-links a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  position: absolute;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/*active link effect*/
+.nav-links a:active {
+  font-weight: 600;
+}
+
+.nav-links a:active::after {
+  height: 2px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*Media queries*/
+@media screen and (max-width: 900px) {
+  .nav-links {
+    width: 65%;
+    margin-right: 50px;
+  }
+
+  .nom-site {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .burger-title {
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+  }
+
+  .menu-ham {
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;
+    z-index: 3;
+  }
+
+  .nom-site {
+    margin: 50px;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .line:nth-child(1) {
+    top: 0px;
+  }
+  .line:nth-child(2) {
+    top: 10px;
+  }
+  .line:nth-child(3) {
+    top: 20px;
+  }
+
+  /* Animation burger-menu */
+  .menu-ham.active .line:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+
+  .menu-ham.active .line:nth-child(2) {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  .menu-ham.active .line:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+  }
+
+  .nav-links {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -15%);
+    -webkit-clip-path: circle(100px at 90% -15%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 2;
+    position: absolute;
+  }
+
+  .nav-links.open {
+    height: 100vh;
+    clip-path: circle(2000px at 90% -10%);
+    -webkit-clip-path: circle(2000px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* Gradual effect link */
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.3s;
+  }
+
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.4s;
+  }
+
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.5s;
+  }
+
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.6s;
+  }
+
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.7s;
+  }
+
+  li.fade {
+    opacity: 1;
+  }
+
+  /* Disable scrolling in the background when burger menu is open */
+  .lock-scroll {
+    overflow: hidden;
+  }
+}
