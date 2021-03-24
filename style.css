@@ -3,26 +3,20 @@
   padding: 0;
 }
 
-header {
-  /* display: flex;
+nav {
+  height: 11vh;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
-  /* background-color: cadetblue; */
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* h1 {
-  font-weight: bold;
-  color: #000000;
-  margin-left: 200px;
-  padding-bottom: 8px;
-} */
-
-nav {
-  height: 10vh;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  /* background-color: cadetblue; */
+.nom-site {
+  margin-left: 100px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 5px;
 }
 
 .nav-links {
@@ -32,36 +26,32 @@ nav {
   list-style: none;
   width: 50%;
   height: 100%;
-  margin-left: auto;
-  /* background-color: salmon; */
+  margin-right: 85px;
 }
 
 .nav-links li a {
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
   display: inline-block;
-  padding-bottom: 8px;
+  padding: 16px 0px 8px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: black;
   position: relative;
 }
 
+/*hover link effect*/
 .nav-links a::after {
-  color: #000000;
-  text-decoration: none;
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
   height: 2px;
-  right: 10%;
-  position: absolute;
   background: black;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  text-decoration: none;
+  position: absolute;
 }
 
 .nav-links a:hover::after {
@@ -69,34 +59,103 @@ nav {
   left: 0;
 }
 
-@media screen and (max-width: 768px) {
-  /* h1 {
-    display: none;
-  } */
+/*active link effect*/
+.nav-links a:active {
+  font-weight: 600;
+}
 
-  .line {
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 5px;
+.nav-links a:active::after {
+  height: 2px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*Media queries*/
+@media screen and (max-width: 900px) {
+  .nav-links {
+    width: 65%;
+    margin-right: 50px;
   }
 
+  .nom-site {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 690px) {
   nav {
-    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .burger-title {
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
   }
 
   .menu-ham {
-    position: absolute;
+    width: 30px;
+    height: 22px;
     cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;
+    z-index: 3;
+  }
+
+  .nom-site {
+    margin: 50px;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .line:nth-child(1) {
+    top: 0px;
+  }
+  .line:nth-child(2) {
+    top: 10px;
+  }
+  .line:nth-child(3) {
+    top: 20px;
+  }
+
+  /* Animation burger-menu */
+  .menu-ham.active .line:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+
+  .menu-ham.active .line:nth-child(2) {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  .menu-ham.active .line:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
   }
 
   .nav-links {
-    position: fixed;
-    background-color: cadetblue;
+    background-color: white;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -104,20 +163,25 @@ nav {
     -webkit-clip-path: circle(100px at 90% -15%);
     transition: all 1s ease-out;
     pointer-events: none;
+    z-index: 2;
+    position: absolute;
   }
 
   .nav-links.open {
-    clip-path: circle(2000px at 90% -15%);
-    -webkit-clip-path: circle(2000px at 90% -15%);
+    height: 100vh;
+    clip-path: circle(2000px at 90% -10%);
+    -webkit-clip-path: circle(2000px at 90% -10%);
     pointer-events: all;
   }
 
-  .nav-links li {
-    opacity: 0;
+  .nav-links li a {
+    font-size: 14px;
+    margin: 0;
   }
 
-  .nav-links li a {
-    font-size: 25px;
+  /* Gradual effect link */
+  .nav-links li {
+    opacity: 0;
   }
 
   .nav-links li:nth-child(1) {
@@ -238,32 +302,8 @@ background-attachment: fixed;
 
 }
 
+  /* Disable scrolling in the background when burger menu is open */
+  .lock-scroll {
+    overflow: hidden;
+  }
 
-
-.welcome {
-  text-align: center;
-  background-color: white;
-  color: black;
-}
-
-section {
-  background-color: #413131;
-  color: white;
-  text-align: center;
-}
-
-
- .txt-north, .txt-center, .txt-south, .txt-trans {
-    margin: 0px;
-    color: white;
-    padding: 50px;
-    font-size: 20px;
-}
-
-
-
-footer{
-    width: 100%;
-    height: 80px;
-    background-color: chocolate;
-}
