@@ -3,26 +3,20 @@
   padding: 0;
 }
 
-header {
-  /* display: flex;
+nav {
+  height: 11vh;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
-  /* background-color: cadetblue; */
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* h1 {
-  font-weight: bold;
-  color: #000000;
-  margin-left: 200px;
-  padding-bottom: 8px;
-} */
-
-nav {
-  height: 10vh;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  /* background-color: cadetblue; */
+.nom-site {
+  margin-left: 100px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 5px;
 }
 
 .nav-links {
@@ -32,36 +26,32 @@ nav {
   list-style: none;
   width: 50%;
   height: 100%;
-  margin-left: auto;
-  /* background-color: salmon; */
+  margin-right: 85px;
 }
 
 .nav-links li a {
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
   display: inline-block;
-  padding-bottom: 8px;
+  padding: 16px 0px 8px 0px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: black;
   position: relative;
 }
 
+/*hover link effect*/
 .nav-links a::after {
-  color: #000000;
-  text-decoration: none;
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
   height: 2px;
-  right: 10%;
-  position: absolute;
   background: black;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  text-decoration: none;
+  position: absolute;
 }
 
 .nav-links a:hover::after {
@@ -69,34 +59,103 @@ nav {
   left: 0;
 }
 
-@media screen and (max-width: 768px) {
-  /* h1 {
-    display: none;
-  } */
+/*active link effect*/
+.nav-links a:active {
+  font-weight: 600;
+}
 
-  .line {
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 5px;
+.nav-links a:active::after {
+  height: 2px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*Media queries*/
+@media screen and (max-width: 900px) {
+  .nav-links {
+    width: 65%;
+    margin-right: 50px;
   }
 
+  .nom-site {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 690px) {
   nav {
-    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .burger-title {
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
   }
 
   .menu-ham {
-    position: absolute;
+    width: 30px;
+    height: 22px;
     cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;
+    z-index: 3;
+  }
+
+  .nom-site {
+    margin: 50px;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .line:nth-child(1) {
+    top: 0px;
+  }
+  .line:nth-child(2) {
+    top: 10px;
+  }
+  .line:nth-child(3) {
+    top: 20px;
+  }
+
+  /* Animation burger-menu */
+  .menu-ham.active .line:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+
+  .menu-ham.active .line:nth-child(2) {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  .menu-ham.active .line:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
   }
 
   .nav-links {
-    position: fixed;
-    background-color: cadetblue;
+    background-color: white;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -104,20 +163,25 @@ nav {
     -webkit-clip-path: circle(100px at 90% -15%);
     transition: all 1s ease-out;
     pointer-events: none;
+    z-index: 2;
+    position: absolute;
   }
 
   .nav-links.open {
-    clip-path: circle(2000px at 90% -15%);
-    -webkit-clip-path: circle(2000px at 90% -15%);
+    height: 100vh;
+    clip-path: circle(2000px at 90% -10%);
+    -webkit-clip-path: circle(2000px at 90% -10%);
     pointer-events: all;
   }
 
-  .nav-links li {
-    opacity: 0;
+  .nav-links li a {
+    font-size: 14px;
+    margin: 0;
   }
 
-  .nav-links li a {
-    font-size: 25px;
+  /* Gradual effect link */
+  .nav-links li {
+    opacity: 0;
   }
 
   .nav-links li:nth-child(1) {
@@ -139,13 +203,19 @@ nav {
   .nav-links li:nth-child(5) {
     transition: all 0.5s ease 0.6s;
   }
-
+  
+  
   .nav-links li:nth-child(6) {
     transition: all 0.5s ease 0.7s;
   }
 
   li.fade {
     opacity: 1;
+  }
+
+  /* Disable scrolling in the background when burger menu is open */
+  .lock-scroll {
+    overflow: hidden;
   }
 }
 
@@ -159,6 +229,7 @@ html {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8em;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* image-index */
@@ -188,6 +259,8 @@ html {
   min-height: 400px;
 }
 
+
+/*titre region*/
 .ptext {
   position: absolute;
   top: 50%;
@@ -209,44 +282,140 @@ html {
   color: white;
 }
 
-.img-welcome,
-.img-state-1,
-.img-state-2,
-.img-state-3,
-.img-transport {
-  position: relative;
-  opacity: 0.7;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 
-.img-welcome , .img-state-1 , .img-state-2,  .img-state-3,  .img-transport {
+
+ .img-state-1 , .img-state-2,  .img-state-3,  .img-transport {
 position: relative;
 opacity: 0.70;
 background-position: center;
 background-size: cover ;
 background-repeat: no-repeat;
-margin: 15px;
-
-
+margin: 15px 100px; 
 background-attachment: fixed;
 
-/* border: 1px, solid ,white;
-    border-radius: 10px; */
 }
+
+.img-welcome {
+position: relative;
+opacity: 0.70;
+background-position: center;
+background-size: cover ;
+background-repeat: no-repeat;
+margin : 0;
+background-attachment: fixed;
+}
+
+.welcome {
+  display: inline-block;
+}
+
+
+/*parallax responsive*/
+
+@media screen and (max-width :800px){
+
+  .img-state-1, .img-state-2, .img-state-3, .img-transport {
+margin: 15px 30px;
+/*background-attachment: scroll; */
+
+  }
+  .txt-north, .txt-center, .txt-south, .txt-trans {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .region-click {
+    font-size: 20px;
+    text-align: center;
+
+  }
+  
+  }
+
+@media screen and (max-width :618px) {
+
+  .img-state-1, .img-state-2, .img-state-3, .img-transport {
+    margin: 15px 0px;
+    
+    }
+      .txt-north, .txt-center, .txt-south, .txt-trans{
+        font-size: 10px;
+        text-align: center;
+      }
+    
+      .region-click {
+        font-size: 15px;
+        text-align: center;
+
+}
+.welcome .welcome-txt {
+  margin: 5px;
+  font-size: 15px;
+  
+}
+
+}
+
+@media screen and (max-width :360px) {
+
+  .img-state-1, .img-state-2, .img-state-3, .img-transport {
+    margin: 15px 0px;
+    /*background-attachment: scroll;*/
+    
+      }
+      .ptext{
+        font-size: 40px;
+        text-align: center;
+      }
+    
+      .region-click {
+        font-size: 15px;
+        text-align: center;
+
+}
+
+
+ .welcome .welcome-txt {
+  margin: 0;
+  font-size: 15px;
+  
+} 
+
+.img-transport {
+  margin-bottom: 80px;
+
+  
+  }
+   .img-welcome .titre-principal {
+    font-size: 20px;
+  }
+  }
+  
+
+
+   
+
+
+
 
 /* texte section */
 
 .titre-principal {
-    font-size: 60px;
-    color:black;
-    text-align: center;
-    margin: 0;
-    padding:10px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
     
-
 }
 
+
+.welcome-txt {
+  margin: 25px 100px;
+  font-size: 25px;
+}
 
 
 .welcome {
@@ -270,9 +439,203 @@ section {
 }
 
 
+/*footer*/
 
 footer{
-    width: 100%;
-    height: 80px;
-    background-color: chocolate;
+    
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color:white;
+  color: black;
+  justify-content: space-between;
+  
+  
 }
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.bloc-service-1{
+  align-items: center ;
+  margin: 20px 10px 10px 10px;
+  justify-content: center;
+  
+}
+
+.bloc-service-2  {
+align-items: flex-start;
+margin-top: 20px ;
+margin-right: 20px;
+
+}
+.bloc-service-3{
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+
+
+.reseau li {
+  display: inline-block;
+  align-items: center;
+  
+}
+
+.fallow {
+  margin-top: 5px;
+}
+
+.new-letter .reseau,h2 , .new-letter-txt, input, label {
+  text-align: center;
+  align-items: center;
+}
+
+ li {
+   list-style: none;
+   margin: 1px 6px 8px ;
+   
+ }
+
+ a {
+   text-decoration: none;
+   text-transform: uppercase;
+ }
+
+
+.a-propos {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.contact-us {
+  margin-top: 40px;
+}
+
+h2{
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+
+label {
+ font-size: 10px;
+
+}
+
+.bloc-service-1  a {
+display: inline-block;
+align-items: center;
+text-align: center;
+margin: 30px 20px 20px 60px ;
+font-size: 15px;
+border: 1px solid black;
+border-radius: 40px;
+padding: 10px ;
+
+
+}
+
+.bloc-service-1  a:hover {
+  color: white;
+  background-color: black;
+}
+
+.new-letter-txt {
+font-size: 13px;
+}
+
+input {
+ width: 180px;
+
+}
+
+
+/*footer responsive*/
+
+@media screen and (max-width :800px){
+
+  .welcome .welcome-txt {
+    margin: 50px;
+    font-size: 15px;
+
+  }
+  footer .bloc-service {
+    margin: 0px 0px 0px 0px;
+    border: 1px solid white;
+  }
+
+}
+
+@media screen and (max-width :618px) {
+
+  footer {
+    flex-direction: column;
+    display: flex;
+    
+  } 
+  footer .bloc-service {
+    margin: 0px 0px 0px 0px;
+    border: 1px solid white;
+  }
+
+}
+
+@media screen and (max-width :414px) {
+
+  footer {
+    display: flex;
+  }
+
+footer .bloc-service-1, .bloc-service-2, .bloc-service-3 {
+ margin: 0px 0px 0px 0px;
+ border: 1px solid white;
+ align-items: center;
+}
+
+.bloc-service-1  {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 10px;
+  height: 100px;
+
+
+}
+
+ .bloc-service-1 .contact {
+  margin : 0;
+  align-items: center;
+  text-align: center;
+}
+
+.bloc-service-2{
+  text-align: center;
+  
+}
+
+.bloc-service-2 li a {
+  font-size: 9px;
+  
+
+}
+
+.bloc-service-2 li {
+  margin: 1px;
+}
+
+ .bloc-service-3 .new-letter  {
+  text-align: center;
+
+} 
+ 
+ 
+
+}
+
+
+
+ 
