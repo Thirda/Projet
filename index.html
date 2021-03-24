@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,92 +6,158 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
-  <title>Document</title>
+  <title>Travel</title>
 </head>
 
 <body>
   <header>
-    <h1 class="nom-site">Le site</h1>
     <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Région 1</a></li>
-        <li><a href="#">Région 2</a></li>
-        <li><a href="#">Région 3</a></li>
-        <li><a href="#">Transport</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="menu-ham">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <div class="burger-title">
+        <h1 class="nom-site">AZR Travel</h1>
+        <div class="menu-ham" onclick="lockScroll()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="region1.html">Arctique</a></li>
+        <li><a href="region2.html">Forêt</a></li>
+        <li><a href="region3.html">Vallée</a></li>
+        <li><a href="transport.html">Transports</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
     </nav>
-  </header>
+    </header>
+
+    
 
 
 
-  <div class="img-welcome"></div>
 
-  <section class="welcome">
-    <h1 class="titre-principal"> Titre principal</h1>
-    <p class="welcome-txt">
-      Le hip-hop1,2 est un genre musical caractérisé par un rythme accompagné par son expression musicale le rap2 et de
-      la culture artistique
-      l'entourant créé à New York dans le South Bronx au début des années 1970.
-      La culture hip-hop connaît 5 disciplines : le Rap (ou MCing), le DJing, le Break dancing (ou b-boying),
-      le Graffiti, le Beatboxing. C'est néanmoins par son expression musicale qu'il est le plus connu de nos jours,
-      bien que ce n'ait pas été le cas à ses débuts
-    </p>
 
-  </section>
 
-  <div class="img-state-1">
-    <div class="ptext">
-      <span class="border">
-        <a href="region1.html">North</a>
-      </span>
-      <span><p class="txt-north">
-        "la vallée de neige blabla"
-       </p></span>
 
-    </div>
-    </div>
 
-  
+<div class="img-welcome">
+  <h1 class="titre-principal"> Azerah</h1>
 
-  <div class="img-state-2">
-    <div class="ptext">
-      <span class="border">
-       <a href="region2.html">FOREST</a>
+</div>
+
+<section class="welcome">
+
+  <p class="welcome-txt">
+    Le hip-hop1,2 est un genre musical caractérisé par un rythme accompagné par son expression musicale le rap2 et de
+    la culture artistique
+    l'entourant créé à New York dans le South Bronx au début des années 1970.
+    Le hip-hop1,2 est un genre musical caractérisé par un rythme accompagné par son expression musicale le rap2 et de
+    la culture artistique
+
+  </p>
+
+</section>
+
+<div class="img-state-1">
+  <div class="ptext">
+    <span class="border">
+      <a class="region-click" href="region1.html">North</a>
     </span>
-    <span><p class="txt-center">
-        "Le hip-hop1,2 est un genre musical" <p> </span>
-    </div>
+    <span>
+      <p class="txt-north">
+        "la vallée de neige blabla"
+      </p>
+    </span>
 
   </div>
+</div>
 
-  
- 
+
+
+<div class="img-state-2">
+  <div class="ptext">
+    <span class="border">
+      <a class="region-click" href="region2.html">FOREST</a>
+    </span>
+    <span>
+      <p class="txt-center">
+        "Le hip-hop1,2 est un genre musical"
+      <p>
+    </span>
+  </div>
+
+</div>
+
+
+
 
 
 <div class="img-state-3">
   <div class="ptext">
     <span class="border">
-      <a href="region3.html">DESERT</a>
+      <a class="region-click" href="region3.html">DESERT</a>
     </span>
-    <span><p class="txt-south">
-        "Le hip-hop1,2 est un genre musical"</p> </span>
-    </div>
+    <span>
+      <p class="txt-south">
+        "Le hip-hop1,2 est un genre musical"</p>
+    </span>
+  </div>
 </div>
 
 <div class="img-transport">
   <div class="ptext">
     <span class="border">
-      <a href="transport.html">TRANSPORT</a>
+      <a class="region-click" href="transport.html">TRANSPORT</a>
     </span>
-    <span><p class="txt-trans">
-        "Le hip-hop1,2 est un genre musical"</p></span>
+    <span>
+      <p class="txt-trans">
+        "Le hip-hop1,2 est un genre musical"</p>
+    </span>
+  </div>
+</div>
+
+<div class="space"></div>
+
+
+
+<footer>
+  <div class="bloc-service-1">
+    <a class="contact" href="#">CONTACTEZ NOUS</a>
   </div>
 
-<footer></footer>
+  <div class="bloc-service-2">
+    <ul class="a-propos">
+      <li><a href="#">A propos de nous</a></li>
+      <li><a href="#"> Nous rejoindre</a></li>
+      <li><a href="#">Mention légale</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="bloc-service-3">
+    <div class="new-letter">
+      <h3 class="new-letter-txt">INSCRIPTION NEWSLETTER</h3>
+      <label class="mails"></label>
+
+      <input type="text" id="mail" name="mail" placeholder="nom@mail.com">
+
+      <h2 class="fallow">SUIVEZ NOUS</h2>
+      <ul class="reseau">
+        <li><a href="#" title="image">
+            <img alt="facebook" src="assets/facebook.png" width="30" height="auto" /></a></li>
+        <li><a href="#" title="image">
+            <img alt="instagram" src="assets/instagram.png" width="30" height="auto" /></a></li>
+        <li><a href="#" title="image">
+            <img alt="youtube" src="assets/twiter.png" width="30" height="auto" /></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

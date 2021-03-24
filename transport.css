@@ -226,3 +226,31 @@
    width: 400px;
 }
 /*fin de conteneur1*/
+/*debut conteneur 2 */
+
+.blocContainer2 {
+   font-family: Arial, Helvetica, sans-serif;
+border: 1px solid black
+}
+
+
+.text-croco , .text-licorn , .text-dragon {
+   height: 100px;
+   width: 100%;
+   display: flex; 
+   align-items: center;  
+
+}
+
+.imgcrocodile, .imgLicorne , .imgdragon {
+float: left;
+width: 20%;
+height: 500px;
+
+}
+
+.imgLicorne {
+   float: right;
+   width: 20%;
+   height: 80px;
+}
