@@ -219,224 +219,6 @@ nav {
   }
 }
 
-/* index-parralax */
-
-/* body */
-body,
-html {
-  height: 100%;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8em;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-/* image-index */
-
-.img-welcome {
-  background-image: url("https://cdn.pixabay.com/photo/2014/08/08/21/02/iceland-413702_1280.jpg");
-  min-height: 400px;
-}
-
-.img-state-1 {
-  background-image: url("https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811_1280.jpg");
-  min-height: 400px;
-}
-
-.img-state-2 {
-  background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/14/forest-3082836_1280.jpg");
-  min-height: 400px;
-}
-
-.img-state-3 {
-  background-image: url("https://cdn.pixabay.com/photo/2016/10/10/22/31/desert-1730077_1280.jpg");
-  min-height: 400px;
-}
-
-.img-transport {
-  background-image: url("https://cdn.pixabay.com/photo/2018/05/19/09/20/emotions-3413040_1280.jpg");
-  min-height: 400px;
-}
-
-
-/*titre region*/
-.ptext {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  font-size: 45px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-}
-
-.ptext .border {
-  background-color: #111;
-  color: white;
-  opacity: 0.5;
-}
-
-.border a {
-  text-decoration: none;
-  color: white;
-}
-
-
-
- .img-state-1 , .img-state-2,  .img-state-3,  .img-transport {
-position: relative;
-opacity: 0.70;
-background-position: center;
-background-size: cover ;
-background-repeat: no-repeat;
-margin: 15px 100px; 
-background-attachment: fixed;
-
-}
-
-.img-welcome {
-position: relative;
-opacity: 0.70;
-background-position: center;
-background-size: cover ;
-background-repeat: no-repeat;
-margin : 0;
-background-attachment: fixed;
-}
-
-.welcome {
-  display: inline-block;
-}
-
-
-/*parallax responsive*/
-
-@media screen and (max-width :800px){
-
-  .img-state-1, .img-state-2, .img-state-3, .img-transport {
-margin: 15px 30px;
-/*background-attachment: scroll; */
-
-  }
-  .txt-north, .txt-center, .txt-south, .txt-trans {
-    font-size: 10px;
-    text-align: center;
-  }
-
-  .region-click {
-    font-size: 20px;
-    text-align: center;
-
-  }
-  
-  }
-
-@media screen and (max-width :618px) {
-
-  .img-state-1, .img-state-2, .img-state-3, .img-transport {
-    margin: 15px 0px;
-    
-    }
-      .txt-north, .txt-center, .txt-south, .txt-trans{
-        font-size: 10px;
-        text-align: center;
-      }
-    
-      .region-click {
-        font-size: 15px;
-        text-align: center;
-
-}
-.welcome .welcome-txt {
-  margin: 5px;
-  font-size: 15px;
-  
-}
-
-}
-
-@media screen and (max-width :360px) {
-
-  .img-state-1, .img-state-2, .img-state-3, .img-transport {
-    margin: 15px 0px;
-    /*background-attachment: scroll;*/
-    
-      }
-      .ptext{
-        font-size: 40px;
-        text-align: center;
-      }
-    
-      .region-click {
-        font-size: 15px;
-        text-align: center;
-
-}
-
-
- .welcome .welcome-txt {
-  margin: 0;
-  font-size: 15px;
-  
-} 
-
-.img-transport {
-  margin-bottom: 80px;
-
-  
-  }
-   .img-welcome .titre-principal {
-    font-size: 20px;
-  }
-  }
-  
-
-
-   
-
-
-
-
-/* texte section */
-
-.titre-principal {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  font-size: 45px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-    
-}
-
-
-.welcome-txt {
-  margin: 25px 100px;
-  font-size: 25px;
-}
-
-
-.welcome {
-  text-align: center;
-  background-color: white;
-  color: black;
-}
-
-section {
-  background-color: #413131;
-  color: white;
-  text-align: center;
-}
-
-
- .txt-north, .txt-center, .txt-south, .txt-trans {
-    margin: 0px;
-    color: white;
-    padding: 50px;
-    font-size: 20px;
-}
 
 
 /*footer*/
@@ -457,6 +239,15 @@ footer a {
   text-decoration: none;
   color: black;
 }
+
+.img-reseau {
+
+  width: 30px;
+  height:auto;
+  
+
+}
+
 
 .bloc-service-1{
   align-items: center ;
@@ -584,7 +375,7 @@ input {
 
 }
 
-@media screen and (max-width :414px) {
+@media screen and (max-width :380px) {
 
   footer {
     display: flex;
@@ -632,6 +423,7 @@ footer .bloc-service-1, .bloc-service-2, .bloc-service-3 {
 
 } 
  
+
  
 
 }
