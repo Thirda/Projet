@@ -1,4 +1,13 @@
 /*conteneur1*/
+
+
+.body {
+
+display: inline-flex;
+
+
+}
+
 #slider {
    margin: 0 auto;
    width: 800px;
