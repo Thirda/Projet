@@ -56,7 +56,7 @@ body, html {
     .img1, .img2, .img3 {
       min-width: 650px;
       height: 400px;
-  
+      opacity: 0,70;
     }
   
     .titre1, .titre2, .titre3{
@@ -97,5 +97,5 @@ body, html {
         display: flex;
         columns: 2;
         flex-direction: column;
-      }
+        }
     }

@@ -97,5 +97,18 @@ body, html {
       display: flex;
       columns: 2;
       flex-direction: column;
+      margin-top: 200px;
+    }
+
+    .txt1, .txt2, .txt3{
+      margin: 0;
+    }
+    .img1, .img2, .img3{
+      margin: 0;
+      width: 100%;
+      align-items: center;
+    }
+    span{
+      margin-top: 300px;
     }
   }
