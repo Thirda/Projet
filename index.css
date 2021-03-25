@@ -1,0 +1,248 @@
+
+  
+  /* index-parralax */
+  
+  /* body */
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8em;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  /* image-index */
+  
+  .img-welcome {
+    background-image: url("https://cdn.pixabay.com/photo/2014/08/08/21/02/iceland-413702_1280.jpg");
+    min-height: 400px;
+  }
+  
+  .img-state-1 {
+    background-image: url("https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111811_1280.jpg");
+    min-height: 400px;
+  }
+  
+  .img-state-2 {
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/14/forest-3082836_1280.jpg");
+    min-height: 400px;
+  }
+  
+  .img-state-3 {
+    background-image: url("https://cdn.pixabay.com/photo/2016/10/10/22/31/desert-1730077_1280.jpg");
+    min-height: 400px;
+  }
+  
+  .img-transport {
+    background-image: url("https://cdn.pixabay.com/photo/2018/05/19/09/20/emotions-3413040_1280.jpg");
+    min-height: 400px;
+  }
+  
+  /*titre region*/
+  .ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    }
+  
+  .img-state-1 , .img-state-2,  .img-state-3,  .img-transport {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  margin: 15px 100px; 
+  background-attachment: fixed;
+  }
+  
+  .img-welcome {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  margin : 0;
+  background-attachment: fixed;
+  }
+  
+  /* texte section */
+  
+  .titre-principal {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+      }
+  
+  
+  .welcome-txt {
+    margin: 100px 100px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+   .txt-north, .txt-center, .txt-south, .txt-trans {
+      margin: 0px;
+      color: white;
+      padding: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      
+  }
+  
+  .region-click {
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .region-click:hover {
+  
+  color: black;
+    transition-duration: 3s, 2s;
+    opacity: 0.5;
+    background-color: white;
+  }
+  
+
+  
+  
+  /*parallax responsive*/
+  
+  @media screen and (max-width :800px){
+  
+    .img-state-1, .img-state-2, .img-state-3, .img-transport {
+  margin: 15px 30px;
+  
+  
+    }
+    .txt-north, .txt-center, .txt-south, .txt-trans {
+      font-size: 10px;
+      text-align: center;
+    }
+  
+    .txt-north{
+      display: inline-block;
+      align-items: center;
+    }
+  
+    .region-click {
+      font-size: 20px;
+      text-align: center;
+  
+    }
+    
+    }
+  
+  @media screen and (max-width :618px) {
+  
+    .img-state-1, .img-state-2, .img-state-3, .img-transport {
+      margin: 15px 0px;
+      
+      }
+        .txt-north, .txt-center, .txt-south, .txt-trans{
+          font-size: 10px;
+          text-align: center;
+          
+        }
+      
+        .region-click {
+          font-size: 15px;
+          text-align: center;
+  
+  }
+  .welcome p {
+    margin: 5px;
+    font-size: 15px;
+    
+  }
+  
+  }
+  
+  @media screen and (max-width :380px) {
+  
+    .img-state-1, .img-state-2, .img-state-3, .img-transport {
+      margin: 15px 0px;
+      
+      
+        }
+        .ptext{
+          font-size: 40px;
+          text-align: center;
+        }
+      
+        .region-click {
+          font-size: 20px;
+          text-align: center;
+  
+          
+  
+  }
+  
+  
+   .welcome p {
+    margin: 0;
+    font-size: 15px;
+    
+  } 
+  
+  .img-transport {
+    margin-bottom: 80px;
+  
+    
+    }
+     .img-welcome .titre-principal {
+      font-size: 20px;
+    }
+      .ptext .txt-north {
+        font-size:  8px;
+        padding: 20px;
+        letter-spacing: 2px ;
+        text-align: center;
+        
+      }
+      .ptext .txt-center {
+        font-size: 8px;
+        padding: 20px ;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+  
+      .ptext .txt-south {
+        font-size: 8px;
+        padding: 20px ;
+        letter-spacing: 2px;
+        text-align: center;
+  
+      }
+       .ptext .txt-trans {
+        font-size: 8px;
+        padding: 20px ;
+        letter-spacing: 2px;
+        text-align: center;
+        
+  
+      }
+      
+      
+  
+      
+  }

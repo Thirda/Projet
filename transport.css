@@ -159,6 +159,7 @@ display: inline-flex;
     display: flex;
     justify-content: center;
     text-align: center;
+    font-size: 20px;
 }
 .dragonimg {
    width: 700px;
@@ -186,6 +187,7 @@ display: inline-flex;
    text-align: center;
 }
 
+<<<<<<< HEAD
 
 .conteneretoile {
    display: flex;
@@ -233,6 +235,8 @@ display: inline-flex;
    
    width: 400px;
 }
+=======
+>>>>>>> 9914cfb0b36e31c691189ba0d981779eac05a84a
 /*fin de conteneur1*/
 /*debut conteneur 2 */
 
