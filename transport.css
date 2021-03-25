@@ -150,6 +150,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    font-size: 20px;
 }
 .dragonimg {
    width: 700px;
@@ -177,6 +178,7 @@
    text-align: center;
 }
 
+<<<<<<< HEAD
 
 .conteneretoile {
    display: flex;
@@ -224,32 +226,69 @@
    
    width: 400px;
 }
+=======
+>>>>>>> 9914cfb0b36e31c691189ba0d981779eac05a84a
 /*fin de conteneur1*/
 /*debut conteneur 2 */
 
-.blocContainer2 {
-   font-family: Arial, Helvetica, sans-serif;
-border: 1px solid black
+
+   
+.prenom {
+   text-align: center;
 }
 
+.img  {
+min-width: 600px;
+height : 400px;
+}
 
-.text-croco , .text-licorn , .text-dragon {
-   height: 100px;
-   width: 100%;
+.licorne {
    display: flex; 
    align-items: center;  
+   flex-direction: row-reverse;
+ }
 
+.blocContainer {
+   margin-left: 3%;
+   margin-right: 3%;
+   } 
+
+.licorne, .crocodile, .dragon  {
+   margin: 30px;
+      display : flex;
+      align-items : center;
+      max-width : 100%;
+      margin : 40px -10px 70px -10px;
+    }
+.imgcrocodile, .imgLicorne, .imgDragon {
+      min-width: 650px;
+      height: 400px;
+  
+    }
+    .text10 {
+      min-width: 650px;
+      margin-left: 18px;
+      text-align: left;
+      line-height: 1.8em;
+    }
+
+.text-descriptionC, .text-descriptionL, .text-descriptionD {
+   display: block;
+   align-items: stretch;
 }
 
-.imgcrocodile, .imgLicorne , .imgdragon {
-float: left;
-width: 20%;
-height: 500px;
 
-}
+@media (max-width: 1100px){
+   .blocContainer2 {
+     display: flex;
+     columns: 2;
+     flex-direction: column;
+   }
+ }
 
-.imgLicorne {
-   float: right;
-   width: 20%;
-   height: 80px;
+.avantages {
+   line-height: 2em;
+   text-align: center;
+   
+   font-weight: bold;
 }
