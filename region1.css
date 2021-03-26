@@ -11,9 +11,8 @@ body, html {
       background-size: cover;
       background-position: center;
       position: relative;
-      background-image: url('https://images.pexels.com/photos/371572/pexels-photo-371572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+      background-image: url('https://i2.wp.com/arrahmahnews.com/wp-content/uploads/2018/11/iceland-1950869_1920.jpg?ssl=1');
       min-height: 100%;
-      filter: brightness(80%);
       min-width: 50%;
     }
     
@@ -26,6 +25,7 @@ body, html {
       font-size: 45px;
       letter-spacing: 9px;
       color: rgb(255, 255, 255) !important;
+      font-weight: bold;
     }
     /* good */
     .container2 {
@@ -37,8 +37,8 @@ body, html {
     /* good verif */
     .decouvrir{
       margin-left: 62px;
-      font-size: 30px;
-      margin-top: 100px;
+      font-size: 50px;
+      margin: 100px 0 70px 40px;
     }
     /* good verif */
     #grandContainer {
@@ -57,6 +57,9 @@ body, html {
       min-width: 650px;
       height: 400px;
   
+    }
+    .img1{
+      max-width: 650px;
     }
   
     .titre1, .titre2, .titre3{
@@ -97,5 +100,17 @@ body, html {
         display: flex;
         columns: 2;
         flex-direction: column;
+        margin-top: 200px;
+      }
+  
+      .txt1, .txt2, .txt3{
+        margin: 0;
+        margin-top: 30px;
+      }
+      .img1, .img2, .img3{
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        max-width: none;
       }
     }

@@ -11,9 +11,8 @@ body, html {
       background-size: cover;
       background-position: center;
       position: relative;
-      background-image: url('https://images.pexels.com/photos/371572/pexels-photo-371572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+      background-image: url('https://images.pexels.com/photos/632280/pexels-photo-632280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
       min-height: 100%;
-      filter: brightness(80%);
       min-width: 50%;
     }
     
@@ -26,6 +25,7 @@ body, html {
       font-size: 45px;
       letter-spacing: 9px;
       color: rgb(255, 255, 255) !important;
+      font-weight: bold;
     }
     /* good */
     .container2 {
@@ -37,8 +37,8 @@ body, html {
     /* good verif */
     .decouvrir{
       margin-left: 62px;
-      font-size: 30px;
-      margin-top: 100px;
+      font-size: 50px;
+      margin: 100px 0 70px 40px;
     }
     /* good verif */
     #grandContainer {
@@ -52,7 +52,9 @@ body, html {
       max-width: 100%;
       margin: 0px -10px 70px -10px;
     }
-  
+    .img3{
+      max-width: 650px;
+    }
     .img1, .img2, .img3 {
       min-width: 650px;
       height: 400px;
@@ -97,5 +99,19 @@ body, html {
         display: flex;
         columns: 2;
         flex-direction: column;
-        }
+        margin-top: 200px;
+      }
+  
+      .txt1, .txt2, .txt3{
+        margin: 0;
+        margin-top: 30px;
+      }
+      .img1, .img2, .img3{
+        margin: 0;
+        width: 100%;
+        align-items: center;
+      }
+      .img3{
+        max-width: none;
+      }
     }
