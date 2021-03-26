@@ -81,28 +81,21 @@
     font-size: 60px;
     letter-spacing: 8px;
     text-transform: uppercase;
-      }
+  }
   
   
   .welcome-txt {
     margin: 100px 100px;
     font-size: 20px;
     text-align: center;
-  }
+   }
   
-  
-  
-  
-  
-  
-  
-   .txt-north, .txt-center, .txt-south, .txt-trans {
-      margin: 0px;
-      color: white;
-      padding: 50px;
-      font-size: 20px;
-      font-weight: bold;
-      
+  .txt-north, .txt-center, .txt-south, .txt-trans {
+    margin: 0px;
+    color: white;
+    padding: 50px;
+    font-size: 20px;
+    font-weight: bold;
   }
   
   .region-click {
@@ -122,9 +115,6 @@
     background-color: white;
   }
   
-
-  
-  
   /*parallax responsive*/
   
   @media screen and (max-width :800px){
@@ -132,8 +122,7 @@
     .img-state-1, .img-state-2, .img-state-3, .img-transport {
   margin: 15px 30px;
   
-  
-    }
+  }
     .txt-north, .txt-center, .txt-south, .txt-trans {
       font-size: 10px;
       text-align: center;
@@ -147,7 +136,6 @@
     .region-click {
       font-size: 20px;
       text-align: center;
-  
     }
     
     }
@@ -158,20 +146,21 @@
       margin: 15px 0px;
       
       }
-        .txt-north, .txt-center, .txt-south, .txt-trans{
-          font-size: 10px;
-          text-align: center;
+        
+    .txt-north, .txt-center, .txt-south, .txt-trans{
+      font-size: 10px;
+      text-align: center;
           
         }
       
-        .region-click {
-          font-size: 15px;
-          text-align: center;
+    .region-click {
+      font-size: 15px;
+      text-align: center;
   
   }
   .welcome p {
-    margin: 5px;
-    font-size: 15px;
+      margin: 5px;
+      font-size: 15px;
     
   }
   
@@ -184,23 +173,20 @@
       
       
         }
-        .ptext{
-          font-size: 40px;
-          text-align: center;
-        }
+    .ptext{
+       font-size: 40px;
+       text-align: center;
+        
+      }
       
-        .region-click {
-          font-size: 20px;
-          text-align: center;
+      .region-click {
+        font-size: 20px;
+        text-align: center;
+      }
   
-          
-  
-  }
-  
-  
-   .welcome p {
-    margin: 0;
-    font-size: 15px;
+      .welcome p {
+        margin: 0;
+        font-size: 15px;
     
   } 
   
@@ -239,10 +225,6 @@
         letter-spacing: 2px;
         text-align: center;
         
-  
       }
-      
-      
-  
       
   }

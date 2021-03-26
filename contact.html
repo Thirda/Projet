@@ -5,10 +5,36 @@
   <title>Formulaire</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
   integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contact.css">
+  
 </head>
 <body>
-  <section class="contact">
+
+  <header>
+    <nav>
+      <div class="burger-title">
+        <h1 class="nom-site">AZR Travel</h1>
+        <div class="menu-ham" onclick="lockScroll()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="region1.html">Arctique</a></li>
+        <li><a href="region2.html">Forêt</a></li>
+        <li><a href="region3.html">Vallée</a></li>
+        <li><a href="transport.html">Transports</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+    </nav>
+    </header>
+
+  <section class="contact-a">
     <div class="content">
       <h2>N'hésitez pas à nous envoyer un message !</h2><br>
       <p>Merci de remplir tous les champs obligatoires de ce formulaire.<br>
@@ -66,5 +92,36 @@ Si vous souhaitez formuler une demande spécifique, <br>veuillez l'indiquer à l
       </div>
     </div>
   </section>
+
+  <footer>
+     <div class="bloc-service-1"> 
+         <a class="contact" href="#">Contactez-nous</a> 
+    </div>
+  
+    <div class="bloc-service-2">
+        <ul class="a-propos">
+            <li><a href="#">A propos de nous</a></li>
+            <li><a href="#"> Nous rejoindre</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+    </div>
+  
+    <div class="bloc-service-3">
+        <div class="newsletter-txt">Inscription newsletter</div>
+        <label class="mails"></label>
+        <input type="text" id="mail" name="mail" placeholder="nom@mail.com">
+  
+        <div class="follow">Suivez-nous</div>
+        <img class="logo-network" src="assets/logo_FB.png" alt="logo FB"></img>
+        <img class="logo-network" src="assets/logo_Insta.png" alt="logo FB"></img>
+        <img class="logo-network" src="assets/logo_Youtube.png" alt="logo FB"></img>
+    </div>
+  </footer>
+  
+  
+  
+  <script src="script.js"></script>
+
 </body>
 </html>
