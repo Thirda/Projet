@@ -231,6 +231,12 @@ height : 400px;
       height: 400px;
   
     }
+.imgcrocodile , .imgDragon {
+
+   margin-left: 20px;
+
+}
+
     .text10 {
       min-width: 650px;
       margin-left: 18px;
